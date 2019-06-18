@@ -1,0 +1,40 @@
+[] . ^ $ * + ? {} () \ |
+
+
+[] => Square brackets. Square brackets specifies a set of characters you wish to match.
+       [abc] will match to a, ab, abc, ac, bc, ca, ba. 
+       [a-e] => same as [abcde]
+       [1-5] => same as [12345]
+       [0-39] => same as [01239]
+       [^abc] means any character except a or b or c.
+       [^0-9] means any non-digit character.
+
+
+. => Period. A period matches any single character (except newline '\n')
+        .. will match a, ac, acd, acde, etc.
+
+^ => Caret. The caret symbol ^ is used to check if a string starts with a certain character.
+        ^a will match a, ab, acd, abs, afgr, etc.
+
+$ => Dollar. The dollar symbol $ is used to check if a string ends with a certain character.
+        a$ will match a, formula, etc.
+
+* => Star. The star symbol * matches zero or more occurrences of the pattern left to it.
+        ma*n will match mn, man, maaan, woman, etc.
+
++ => Plus. The plus symbol + matches one or more occurrences of the pattern left to it.
+        ma+n will match man, maaan, woman
+
+? => Question. The question mark symbol ? matches zero or one occurrence of the pattern left to it.
+        ma?n will match mn, man, woman
+
+{} => Braces. Consider this code: {n,m}. This means at least n, and at most m repetitions of the pattern left to it.
+        a{2, 3} will match abs daat, aabc daaat, aabc daaaat
+
+| => Alternation. Vertical bar | is used for alternation (or operator).
+        a|b will match ade, acdbea, etc.
+
+() => Group. Parentheses () is used to group sub-patterns. For example, (a|b|c)xz match any string that matches either a or b or c followed by xz
+        (a|b|c)xz will match abxz, axz cabxz
+
+\ - Backslash. Backlash \ is used to escape various characters including all metacharacters

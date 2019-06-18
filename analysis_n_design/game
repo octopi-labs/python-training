@@ -1,0 +1,38 @@
+
+
+“Aliens have invaded a space ship and our hero has to go through a maze 
+of rooms defeating
+them so he can escape into an escape pod to the planet below. 
+The game will be more like a Zork
+or Adventure type game with text outputs and funny ways to die. 
+The game will involve an engine
+that runs a map full of rooms or scenes. Each room will print 
+its own description when the player
+enters it and then tell the engine what room to run next out of the map.”
+
+The scenes are as follows:
+1. Death: This is when the player dies and should be something funny.
+2. Central Corridor: This is the starting point and has a Gothon already 
+    standing there, which
+    the player has to defeat with a joke before continuing.
+3. Laser Weapon Armory: This is where the hero gets a neutron bomb to 
+    blow up the ship before
+    getting to the escape pod. It has a keypad he has to guess the number for.
+4. The Bridge: Another battle scene with a Gothon where the hero places 
+    the bomb.
+5. Escape Pod: Where the hero escapes but only after guessing 
+    the right escape pod.
+
+Things to do:
+
+1. Extract Nouns from this.
+2. Extract verbs from the description.
+3. Create a Class Hierarchy and Object Map for the Concepts
+
+
+Nouns: Map, Escape Pod, 
+        Engine, Death, Player, Central Corridor, 
+        Bridge, Laser Weapon Armory, Scene
+
+Verbs: escape, die, starting,  
+        next, run, enters
