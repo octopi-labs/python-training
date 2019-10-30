@@ -16,7 +16,8 @@ elif buses < cars:
 else:
     print("We still can't decide.")
 
-if people > buses:
+if people < buses:
     print("Alright, let's just take the buses.")
 else:
-    print("Fine, let's stay home then.")
+    #print("Fine, let's stay home then.")
+    pass

@@ -17,3 +17,4 @@ venv_training
 venv
 logs
 training_venv
+test_venv

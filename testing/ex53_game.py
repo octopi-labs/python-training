@@ -27,7 +27,9 @@ def test_map():
     west.add_paths({'east': start})
     down.add_paths({'up': start})
     
-    assert start.go('west') != west
+    print(id(west))
+    print(id(start.go('west')))
+    assert start.go('west') is west
     assert start.go('west').go('east') == start
     assert start.go('down').go('up') == start
     

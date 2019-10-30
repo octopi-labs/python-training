@@ -22,7 +22,7 @@ for i in range(0, 6):
     print("Adding {} to the list.".format(i))
     # append is a function that lists understand
     elements.append(i)
-    
+
 # now we can print them out too
 for i in elements:
     print("Element was: {}".format(i))

@@ -76,3 +76,8 @@ for item in []:
 else:
     print("Can not execute for.")
 
+
+# a = age < 13 ? "first" : "second"
+age = 12
+a = "first" if age < 13 else "second"
+print(a)

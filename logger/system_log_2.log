@@ -1,0 +1,10 @@
+2019-10-30 14:19:20,606 This is exception logging.
+Traceback (most recent call last):
+  File "ex100.py", line 15, in <module>
+    1/0
+ZeroDivisionError: division by zero
+2019-10-30 14:19:37,774 This is exception logging.
+Traceback (most recent call last):
+  File "ex100.py", line 15, in <module>
+    1/0
+ZeroDivisionError: division by zero

@@ -53,7 +53,7 @@ class RightPyramid(Square, Triangle):
         self.slant_height = slant_height
         kwargs["height"] = slant_height
         kwargs["length"] = base
-        super().__init__(base=base, **kwargs)
+        super(Square, self).__init__(base=base, **kwargs)
 
     def area(self):
         base_area = super().area()
@@ -71,7 +71,7 @@ class RightPyramid(Square, Triangle):
 
 
 if __name__ == "__main__":
-    pyramid = RightPyramid(2, 4)
+    pyramid = RightPyramid(**{"base": 1, "slant_height":2})
     print(RightPyramid.__mro__)
     print(pyramid.area())
     print(pyramid.area_2())

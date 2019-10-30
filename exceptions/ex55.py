@@ -20,5 +20,7 @@ for entry in randomList:
         print("Expected a number got an alphabate")
         print("Next entry")
         print()
+    except Exception as e:
+        print("Testing")
         
 print("The reciprocal of",entry,"is",r)

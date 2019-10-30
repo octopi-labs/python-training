@@ -28,6 +28,7 @@ example_obj = Example()  # "Rahul", "Shelke")
 print(example_obj.print_name())
 print(example_obj.first)
 print(example_obj.last)
+# example_obj.middle = ""
 example_obj.first = "Rahul"
 example_obj.last = "Shelke"
 print(example_obj.print_name())

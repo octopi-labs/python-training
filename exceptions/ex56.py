@@ -1,7 +1,7 @@
 import sys
 import os
 
-filename = os.path.dirname(__file__) + os.sep + "test.txt"
+filename = os.path.dirname(__file__) + os.sep + "test_1.txt"
 try:
     print("In try block")
     f = open(filename, encoding = 'utf-8', mode='r')

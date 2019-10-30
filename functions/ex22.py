@@ -27,4 +27,4 @@ def fourth_func(*params):
 first_func()
 second_func("Bhushan")
 third_func("Rahul", "Shelke")
-fourth_func("Rahul", "Shelke") #, "Here", "There")
+fourth_func("Rahul", "Shelke", "Here", "There")
