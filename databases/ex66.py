@@ -10,7 +10,7 @@ try:
     cursor = conn.cursor()
 
     # SQL query string
-    sqlQuery = "SELECT firstname, lastname, id FROM employee2"   
+    sqlQuery = "SELECT firstname, lastname, id FROM employee"   
 
     # Execute the sqlQuery
     cursor.execute(sqlQuery)

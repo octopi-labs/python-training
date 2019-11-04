@@ -11,7 +11,7 @@ try:
     cursor = conn.cursor()
 
     # query
-    sql = "INSERT INTO employee2(id, lastname, firstname, departmentcode) VALUES(2, 'Shelke', 'Rahul1', '254')"
+    sql = "INSERT INTO employee(id, lastname, firstname, departmentcode) VALUES(2, 'Shelke', 'Rahul', '254')"
 
     # execute query
     cursor.execute(sql)

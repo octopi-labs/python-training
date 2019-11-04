@@ -1,20 +1,20 @@
 # importing the module
-# import pymysql
-import pymssql as pymysql
+import pymysql
+# import pymssql as pymysql
 
 
 try:
     # opening a database connection
-    conn = pymysql.connect("172.16.60.57", "abc", "abc", "testprog", autocommit=True)
+    conn = pymysql.connect("localhost", "root", "root", "testprog", autocommit=True)
 
     # define a cursor object
     cursor = conn.cursor()
 
     # drop table if exists
-    # cursor.execute("DROP TABLE IF EXISTS employee;")
+    cursor.execute("DROP TABLE IF EXISTS employee;")
 
     # query
-    sql = "CREATE TABLE employee2(id int, lastname varchar(32), firstname varchar(32), departmentcode int) "
+    sql = "CREATE TABLE employee(id int, lastname varchar(32), firstname varchar(32), departmentcode int) "
 
     # execute query
     cursor.execute(sql)
