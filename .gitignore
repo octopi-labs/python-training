@@ -6,6 +6,7 @@
 *.jpg
 *.png
 *.mat
+*.xml
 tags
 
 __pycache__
