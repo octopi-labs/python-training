@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Products>
+    {% for product in product_list %}<Product>
+            <Name>{{ product.name }}</Name>
+            <Details>{{ product.detail }}</Details>
+            <Price>{{ product.price }}</Price>
+            <Hero>{{ product.hero }}</Hero>
+            <Info>{{ product.info }}</Info>
+            <Offer>{{ product.offer }}</Offer>
+            <Image>{{ product.image }}</Image>
+        </Product>
+        {% endfor %}
+</Products>
