@@ -1,6 +1,7 @@
 import json
-import dicttoxml
 from xml.dom.minidom import parseString
+
+import dicttoxml
 
 product_file = open('product.json', 'r')
 
