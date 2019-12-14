@@ -9,7 +9,6 @@ soup = BeautifulSoup(page.text, 'html.parser')
 
 # Remove bottom links
 last_links = soup.find(class_='AlphaNav')
-# print(last_links)
 last_links.decompose()
 
 
