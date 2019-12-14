@@ -1,7 +1,8 @@
 
-print("Inside ex31:", __name__)
+print("outside of if in ex31:", __name__)
 
 if __name__ == '__main__':
+    
     print("You enter a dark room with two doors. Do you go through door #1 or door #2?")
 
     door = input("> ")

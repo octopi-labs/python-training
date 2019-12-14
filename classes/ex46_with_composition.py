@@ -12,7 +12,7 @@ class Rectangle(object):
 
 class Square(Rectangle):
     def __init__(self, length):
-        super().__init__(length, length)
+        super(Square, self).__init__(length, length)
 
 class VolumeMixin(object):
     def volume(self):
@@ -20,14 +20,14 @@ class VolumeMixin(object):
 
 class Cube(VolumeMixin, Square):
     def __init__(self, length):
-        super().__init__(length)
+        super(Cube, self).__init__(length)
         self.height = length
 
     def face_area(self):
-        return super().area()
+        return super(Cube, self).area()
 
     def surface_area(self):
-        return super().area() * 6
+        return super(Cube, self).area() * 6
 
 
 if __name__ == "__main__":

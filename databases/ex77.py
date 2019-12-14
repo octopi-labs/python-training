@@ -16,7 +16,7 @@ query = db.insert(emp)
 values_list = [{'Id':'2', 'name':'ram', 'salary':80000, 'active':False},
                {'Id':'3', 'name':'ramesh', 'salary':70000, 'active':True},
                {'Id':'4', 'name':'naveen', 'salary':90000, 'active':True}]
-ResultProxy = connection.execute(query,values_list)
+ResultProxy = connection.execute(query, values_list)
 
 results = connection.execute(db.select([emp])).fetchall()
 df = pd.DataFrame(results)

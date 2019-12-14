@@ -5,7 +5,7 @@ y = "Those who know {binary} and those who {do_not}.".format(binary=binary, do_n
 print(x)
 print(y)
 print("I said: %r." % x)
-print("I also said: '%s'." % y)
+print("I also said: %s." % y)
 hilarious = False
 joke_evaluation = "Isn't that joke so funny?! {}"
 print(joke_evaluation.format(hilarious))
