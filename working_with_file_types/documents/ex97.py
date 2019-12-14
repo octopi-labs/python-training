@@ -2,16 +2,16 @@ import os
 from docx import Document
 
 
-def getText(filename):
+def get_text(filename):
     document = Document(filename)
-    fullText = []
+    full_text = []
     for para in document.paragraphs:
-        fullText.append(para.text)
-    return '\n'.join(fullText)
+        full_text.append(para.text)
+    return '\n'.join(full_text)
 
 if __name__ == "__main__":
     # open a new document 
     current_dir = os.path.dirname(__file__)
     filename = os.path.join(current_dir, "test.docx")
-    print(getText(filename))
+    print(get_text(filename))
 

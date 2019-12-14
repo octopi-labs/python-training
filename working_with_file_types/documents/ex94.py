@@ -32,11 +32,11 @@ for row in table.rows:
 
 # Row count
 row_count = len(table.rows)
-print(row_count)
+print("Row Count:", row_count)
 
 # Column count
 col_count = len(table.columns)
-print(col_count)
+print("Column Count:", col_count)
 
 # Add row to table
 row = table.add_row()
@@ -55,7 +55,6 @@ items = (
 
 # add table ------------------
 table = document.add_table(1, 3)
-table.style = 'LightShading-Accent1'
 
 # populate header row --------
 heading_cells = table.rows[0].cells

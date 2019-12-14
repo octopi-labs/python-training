@@ -8,9 +8,9 @@ filename = os.path.join(current_dir, "test.xlsx")
 # Load workbook
 wb = openpyxl.load_workbook(filename)
 
-print(wb.get_sheet_names())
+print(wb.sheetnames)
 
-sheet = wb.get_sheet_by_name('First Sheet')
+sheet = wb['First Sheet']
 
 anotherSheet = wb.active
 

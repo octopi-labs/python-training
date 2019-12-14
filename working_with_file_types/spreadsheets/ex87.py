@@ -8,7 +8,8 @@ filename = os.path.join(current_dir, "test.xlsx")
 wb = openpyxl.Workbook()
 
 # Get all sheet names in a workbook
-print("Sheets:", wb.get_sheet_names())
+# print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
 # Get the active sheet
 sheet = wb.active
@@ -21,7 +22,7 @@ print("Sheet Title:", sheet.title)
 # Change sheet title
 sheet.title = 'CMI Team'
 
-print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
 # Save the spreadsheet workbook
 wb.save(filename)
@@ -29,27 +30,28 @@ wb.save(filename)
 # Create a new sheet
 wb.create_sheet()
 
-print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
 # Create new sheet at the first position
 wb.create_sheet(index=0, title='First Sheet')
 
-print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
 # Create sheet at indexed position
 wb.create_sheet(index=2, title='Middle Sheet')
 
-print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
 # get sheet by name
-print(wb.get_sheet_by_name('CMI Team'))
+# print(wb.get_sheet_by_name('CMI Team'))
+print(wb['CMI Team'])
 
 # Remove sheet
 wb.remove_sheet(wb.get_sheet_by_name('Sheet'))
 
-print("Sheets:", wb.get_sheet_names())
+print("Sheets:", wb.sheetnames)
 
-sheet = wb.get_sheet_by_name('First Sheet')
+sheet = wb['First Sheet']
 
 # Write value to sheet
 sheet['A1'] = "Name"
