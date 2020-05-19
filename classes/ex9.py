@@ -1,36 +1,29 @@
-'''
-NOTE: With composition, we can add very specific functionality to your classes from 
-        a specialized, simple class called a mixin
-'''
-class Rectangle(object):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+class Parent(object):
+    def override(self):
+        print("PARENT override()")
 
-    def area(self):
-        return self.length * self.width
+    def implicit(self):
+        print("PARENT implicit()")
 
-class Square(Rectangle):
-    def __init__(self, length):
-        super(Square, self).__init__(length, length)
+    def altered(self):
+        print("PARENT altered()")
 
-class VolumeMixin(object):
-    def volume(self):
-        return self.area() * self.height
 
-class Cube(VolumeMixin, Square):
-    def __init__(self, length):
-        super(Cube, self).__init__(length)
-        self.height = length
+class Child(Parent):
+    def override(self):
+        print("CHILD override()")
 
-    def face_area(self):
-        return super(Cube, self).area()
-
-    def surface_area(self):
-        return super(Cube, self).area() * 6
-
+    def altered(self):
+        print("CHILD, BEFORE PARENT altered()")
+        super(Child, self).altered()
+        print("CHILD, AFTER PARENT altered()")
 
 if __name__ == "__main__":
-    cube = Cube(2)
-    print(cube.surface_area())
-    print(cube.volume())
+    dad = Parent()
+    son = Child()
+    dad.implicit()
+    son.implicit()
+    dad.override()
+    son.override()
+    dad.altered()
+    son.altered()

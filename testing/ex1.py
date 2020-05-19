@@ -1,7 +1,8 @@
 import pytest
 
-def test_file1_method4():
-    x = 5
-    y = 6
-    with pytest.raises(AssertionError):
-        assert x == y,"test failed"
+
+def test_assertions():
+    assert "hello" != "Hai"  # is an assertion failure.
+    assert 4 == 4  # is a successful assertion
+    assert True  # is a successful assertion
+    assert not False  # is an assertion failure.

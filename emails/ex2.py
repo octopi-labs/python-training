@@ -1,31 +1,15 @@
-import smtplib
+from email_func import get_file_content, create_message, send_email, get_configurations
 
-gmail_user = 'username'  
-gmail_password = 'password'
 
-sent_from = gmail_user  
-to = ['test@example.com', 'test@example.com']  
-subject = 'Testing email'  
-body = "Hey, what's up?\n\n- You"
+if __name__ == "__main__":
+    config = get_configurations()
+    sent_from = config['DEFAULT']['username']
+    to = ['test1@example.com', 'test2@example.com']  
+    subject = 'Testing email'  
 
-email_text = """  
-From: {}  
-To: {}  
-Subject: {}
+    text = get_file_content("email.txt").decode('utf-8')
+    html = get_file_content("email.html").decode('utf-8')
 
-{}
-""".format(sent_from, ", ".join(to), subject, body)
+    msg = create_message(subject, sent_from, to, text, html)
 
-message = "Subject: {}\n\n{}".format(subject, email_text)
-
-smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-
-print(smtpObj.ehlo())
-
-smtpObj.starttls()
-
-smtpObj.login(gmail_user, gmail_password)
-
-smtpObj.sendmail(sent_from, to, message)
-
-smtpObj.quit()
+    send_email(sent_from, to, msg)

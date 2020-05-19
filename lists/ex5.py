@@ -1,16 +1,13 @@
 a_lists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-print(a_lists)
+# Copy all even elements of list a to list b
+b_lists = []
+for item in a_lists:
+    if item % 2 == 0:
+        b_lists.append(item)
 
-# Remove all elements of the list
-tmp = None
-while len(a_lists) > 0:
-    tmp = a_lists.pop()
-    print(tmp)
+print(b_lists)
 
-print(a_lists)
-
-# Delete the entire list
-del a_lists
-print(tmp)
-print(a_lists)
+# List comprehension
+c_lists = [item for item in a_lists if item % 2 == 0]
+print(c_lists)

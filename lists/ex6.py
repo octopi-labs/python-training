@@ -1,13 +1,23 @@
-a_lists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
 
-# Copy all even elements of list a to list b
-b_lists = []
-for item in a_lists:
-    if item % 2 == 0:
-        b_lists.append(item)
+print("Wait there's not 10 things in that list, let's fix that.")
 
-print(b_lists)
+stuff = ten_things.split(' ')
 
-# List comprehension
-c_lists = [item for item in a_lists if item % 2 == 0]
-print(c_lists)
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+while len(stuff) != 10:
+    next_one = more_stuff.pop()
+    print("Adding: ", next_one)
+    stuff.append(next_one)
+    print("There's {} items now.".format(len(stuff)))
+
+print("There we go: ", stuff)
+
+print("Let's do some things with stuff.")
+
+print(stuff[1])
+print(stuff[-1]) # whoa! fancy
+stuff.pop()
+print(' '.join(stuff)) # what? cool!
+print('#'.join(stuff[3:5])) # super stellar!
