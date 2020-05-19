@@ -6,7 +6,7 @@ Python Training Programs
 
 1. [Data Types](data_types.txt)
 2. [Escape Sequences](escape_sequences.txt)
-3. [Keyword List](keyword_lists.txt)
+3. [Keyword List](keyword_list.txt)
 
 ## Chapters
 
