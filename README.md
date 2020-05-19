@@ -11,7 +11,7 @@ Python Training Programs
 ## Chapters
 
 1. [Introduction](intro)
-2. [IO](io)
+2. [Input Output](io)
 3. [Functions](functions)
 4. [Branching](conditions)
 5. [Lists](lists)
