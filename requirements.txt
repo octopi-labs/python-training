@@ -21,7 +21,7 @@ imageio==2.5.0
 importlib-metadata==0.18
 itsdangerous==1.1.0
 jdcal==1.4.1
-Jinja2==2.10.1
+Jinja2==2.11.3
 kiwisolver==1.1.0
 lxml==4.3.4
 MarkupSafe==1.1.1
