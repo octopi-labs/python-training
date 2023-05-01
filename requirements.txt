@@ -9,7 +9,7 @@ cycler==0.10.0
 decorator==4.4.0
 docx==0.2.4
 et-xmlfile==1.0.1
-Flask==1.0.3
+Flask==2.3.2
 fpdf==1.7.2
 google-api-python-client==1.7.9
 google-auth==1.6.3
